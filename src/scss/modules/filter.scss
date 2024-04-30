@@ -1,0 +1,62 @@
+@use '../variables' as *;
+
+.filter {
+
+  &__fieldset {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__radio {
+    position: absolute;
+    appearance: none;
+  }
+  
+  &__label {
+    display: inline-block;
+    padding: 16px;
+    max-width: 154px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border-radius: 300px;
+    border: 1px solid transparent;
+    background-color: $white;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 40px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+
+    &:hover {
+      background-color: $footer;
+    }
+
+    &_flowers::before {
+      background-image: url('/img/flowers.png');
+    }
+    &_toys::before {
+      background-image: url('/img/toys.png');
+    }
+    &_postcard::before {
+      background-image: url('/img/postcard.png');
+    }
+  }
+  
+  &__radio:focus + &__label {
+    background-color: pink;
+  }
+  
+  &__radio:checked + &__label {
+    background-color: $light-orange;
+    color: $white;
+  }
+}
