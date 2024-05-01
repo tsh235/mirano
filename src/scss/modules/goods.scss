@@ -1,0 +1,18 @@
+@use '../variables' as *;
+
+.goods {
+  padding: 60px 0;
+
+  &__list {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 310px);
+    gap: 24px 20px;
+  }
+
+  &__item {
+  }
+
+  &__card {
+  }
+}

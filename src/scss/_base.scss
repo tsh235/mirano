@@ -95,3 +95,14 @@ iframe {
   padding: 0 27px;
   margin: 0 auto;
 }
+
+.section-title {
+  margin-bottom: 40px;
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: center;
+  color: $green;
+}

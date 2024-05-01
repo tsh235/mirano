@@ -2,10 +2,21 @@
 
 .filter {
 
-  &__fieldset {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__group {
     display: flex;
     align-items: center;
     gap: 12px;
+
+    &_choices {
+      gap: 64px;
+    }
   }
 
   &__radio {
@@ -15,48 +26,68 @@
   
   &__label {
     display: inline-block;
-    padding: 16px;
-    max-width: 154px;
-    width: fit-content;
-    display: flex;
-    align-items: center;
-    gap: 4px;
+    padding: 16px 16px 16px 60px;
     border-radius: 300px;
-    border: 1px solid transparent;
     background-color: $white;
+    background-position: left 16px center;
+    background-repeat: no-repeat;
+    background-size: 40px;
     cursor: pointer;
+    outline: 1px solid transparent;
+    outline-offset: 2px;
 
-    &::before {
-      content: '';
-      display: block;
-      width: 40px;
-      height: 40px;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
+    &_flowers {
+      background-image: url('/img/flowers.png');
+    }
+    &_toys {
+      background-image: url('/img/toys.png');
+    }
+    &_postcard {
+      background-image: url('/img/postcard.png');
     }
 
     &:hover {
       background-color: $footer;
     }
-
-    &_flowers::before {
-      background-image: url('/img/flowers.png');
-    }
-    &_toys::before {
-      background-image: url('/img/toys.png');
-    }
-    &_postcard::before {
-      background-image: url('/img/postcard.png');
-    }
   }
-  
-  &__radio:focus + &__label {
-    background-color: pink;
+
+  &__radio:focus-visible + &__label {
+    outline-color: $orange;
   }
   
   &__radio:checked + &__label {
     background-color: $light-orange;
     color: $white;
+  }
+
+
+  &__choices {
+  }
+
+  &__select {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 8px;
+      height: 8px;
+      background: url('/img/arrow.svg') no-repeat center/contain;
+      transition: .36s;
+    }
+  }
+
+  &__input-price {
+  }
+
+  &__type-list {
+  }
+
+  &__type-item {
+  }
+
+  &__type-btn {
   }
 }

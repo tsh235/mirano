@@ -1,0 +1,68 @@
+@use '../variables' as *;
+
+.footer {
+  padding: 80px 0;
+  border-radius: 32px 32px 0 0;
+  background: $footer url('/img/footer-bg.svg') no-repeat;
+  background-position: bottom;
+  background-size: contain;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 200px;
+  }
+
+  &__contacts {
+    font-style: normal;
+  }
+
+  &__email {
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  &__link {
+    outline: none;
+
+    &:hover, &:focus-visible {
+      color: $orange;
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    color: $orange;
+  
+    &-link {
+      outline: none;
+  
+      &:hover, &:focus-visible {
+        color: $dark;
+      }
+    }
+  
+    &-icon {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  &__developers {
+    &-item:not(:last-child) {
+      margin-bottom: 3px;
+    }
+  }
+
+  &__copyright {
+    text-transform: uppercase;
+  }
+}
