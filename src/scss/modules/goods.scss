@@ -1,18 +1,24 @@
 @use '../variables' as *;
+@use '../media' as *;
 
 .goods {
   padding: 60px 0;
 
+  @include tablet {
+    padding: 40px 0;
+  }
+
   &__list {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(3, 310px);
+    grid-template-columns: repeat(auto-fit, 310px);
     gap: 24px 20px;
-  }
+    max-width: 970px;
+    margin: 0 auto;
 
-  &__item {
-  }
-
-  &__card {
+    @include mobile {
+      grid-template-columns: repeat(2, minmax(140px, 1fr));
+      column-gap: 12px;
+    }
   }
 }

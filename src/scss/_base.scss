@@ -1,4 +1,5 @@
 @use './variables' as *;
+@use './media' as *;
 
 :root {
   position: relative;
@@ -27,6 +28,10 @@ body {
   font-size: 18px;
   line-height: 1.3;
   color: $dark;
+
+  @include mobile {
+    font-size: 14px;
+  }
 }
 
 img,
@@ -54,6 +59,7 @@ a {
 
 input {
   border: none;
+  cursor: pointer;
 }
 
 a, button, input, label, textarea {
@@ -94,6 +100,14 @@ iframe {
   max-width: 1354px;
   padding: 0 27px;
   margin: 0 auto;
+
+  @include tablet {
+    max-width: 694px;
+  }
+
+  @include mobile {
+    padding: 0 14px;
+  }
 }
 
 .section-title {
@@ -105,4 +119,9 @@ iframe {
   text-transform: uppercase;
   text-align: center;
   color: $green;
+
+  @include tablet {
+    margin-bottom: 24px;
+    font-size: 32px;
+  }
 }

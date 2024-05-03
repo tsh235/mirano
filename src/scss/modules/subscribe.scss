@@ -1,7 +1,12 @@
 @use '../variables' as *;
+@use '../media' as *;
 
 .subscribe {
   padding: 80px 0 140px;
+
+  @include tablet {
+    padding: 60px 0 100px;
+  }
 
   &__form {
     position: relative;
