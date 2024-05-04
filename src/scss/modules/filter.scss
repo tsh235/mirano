@@ -84,24 +84,6 @@
     position: relative;
   }
 
-  &__choices-box {
-    padding: 24px;
-    max-width: 276px;
-    width: 100%;
-    border-radius: 12px;
-    background: $white;
-
-    @include mobile {
-      max-width: 236px;
-    }
-
-    &_type {
-      @include mobile {
-        padding: 16px;
-      }
-    }
-  }
-
   &__select {
     display: flex;
     align-items: center;
@@ -115,18 +97,40 @@
       background: url('/img/arrow.svg') no-repeat center/contain;
       transition: .36s;
     }
+
+    &_open {
+      &::after {
+        transform: scale(-1);
+      }
+    }
+  }
+
+  &__choices-box {
+    position: absolute;
+    top: calc(100% + 20px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    border-radius: 12px;
+    background: $white;
   }
 
   &__price {
     display: flex;
     align-items: center;
     gap: 8px;
+    padding: 24px;
+    max-width: 276px;
+    width: 100%;
+
+    @include mobile {
+      max-width: 236px;
+    }
   }
 
   &__input-price {
     padding: 0 16px;
-    flex-basis: 50%;
-    width: 100%;
+    width: 110px;
     height: 40px;
     background-color: $bg;
     border-radius: 32px;
@@ -145,6 +149,18 @@
       background-color: $bg;
       border-color: $light-orange;
     }
+
+    @include mobile {
+      width: 90px;
+    }
+  }
+
+  &__type-list {
+    padding: 24px;
+
+    @include mobile {
+      padding: 16px;
+    }
   }
 
   &__type-item {
@@ -155,6 +171,7 @@
   }
 
   &__type-btn {
+    white-space: nowrap;
     &:hover {
       color: $orange;
     }
