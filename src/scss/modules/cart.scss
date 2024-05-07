@@ -2,7 +2,27 @@
 @use '../media' as *;
 
 .cart {
-  // display: none;
+  display: none;
+
+  &_open {
+    display: flex;
+  }
+
+  @media (max-width: 1360px) {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    height: 100vh;
+  }
+
+  @include mobile {
+    height: auto;
+    bottom: unset;
+    right: 14px;
+  }
   
   &__container {
     padding: 24px 16px;
@@ -12,6 +32,15 @@
     flex-direction: column;
     border-radius: 32px;
     background-color: $white;
+
+    @media (max-width: 1360px) {
+      height: 100%;
+    }
+
+    @include mobile {
+      min-height: auto;
+      max-width: 292px;
+    }
   }
 
   &__header {
@@ -19,11 +48,19 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 8px;
+
+    @include mobile {
+      margin-bottom: 4px;
+    }
   }
 
   &__title {
     font-weight: 400;
     font-size: 28px;
+
+    @include mobile {
+      font-size: 20px;
+    }
   }
 
   &__close {
@@ -45,8 +82,14 @@
     font-size: 14px;
 
     @include mobile {
+      margin-bottom: 24px;
       font-size: 12px;
     }
+  }
+
+  &__list {
+    margin-bottom: 24px;
+    flex-grow: 1;
   }
 
   &__item {
@@ -68,7 +111,7 @@
   &__img {
     grid-area: image;
     border-radius: 12px;
-    width: 100%;
+    width: 54px;
     height: 54px;
     object-fit: cover;
   }
@@ -83,7 +126,7 @@
     grid-area: counter;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 4px;
   }
 
   &__counter-btn {
@@ -95,16 +138,14 @@
   }
 
   &__counter-input {
-    max-width: 20px;
-    height: 100%;
+    width: 22px;
     font-size: 14px;
     text-align: center;
-    border: 1px solid transparent;
-    border-radius: 6px;
-    outline: none;
+    outline: 1px solid transparent;
+    border-radius: 4px;
 
     &:hover, &:focus-visible {
-      border-color: $light-orange;
+      outline-color: $light-orange;
     }
   }
 
@@ -114,7 +155,6 @@
   }
 
   &__footer {
-    margin-top: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;

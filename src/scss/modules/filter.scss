@@ -122,10 +122,6 @@
     padding: 24px;
     max-width: 276px;
     width: 100%;
-
-    @include mobile {
-      max-width: 236px;
-    }
   }
 
   &__input-price {
@@ -164,7 +160,6 @@
   }
 
   &__type-item {
-
     &:not(:last-child) {
       margin-bottom: 8px;
     }
@@ -173,6 +168,10 @@
   &__type-btn {
     white-space: nowrap;
     &:hover {
+      color: $light-orange;
+    }
+    
+    &_active {
       color: $orange;
     }
   }
