@@ -3,7 +3,7 @@
 
 .filter {
 
-  &__container {
+  &__form {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -88,6 +88,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    outline: none;
 
     &::after {
       content: '';
@@ -102,6 +103,10 @@
       &::after {
         transform: scale(-1);
       }
+    }
+
+    &:hover, &:focus-visible {
+      color: $orange;
     }
   }
 

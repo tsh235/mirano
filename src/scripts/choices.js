@@ -29,6 +29,18 @@ const adjustElemPosition = (elem, count = 0) => {
 export const initChoices = () => {
   const choices = document.querySelectorAll('.choices');
   const btns = document.querySelectorAll('.choices__btn');
+
+  const closeAllChoices = ({target}) => {
+    let clickInside = target.closest('.choices');
+
+    if (!clickInside) {
+      btns.forEach(item => {
+        item.classList.remove('filter__select_open');
+        item.nextElementSibling.classList.remove('choices__box_open');
+      });
+      document.removeEventListener('click', closeAllChoices);
+    }
+  };
   
   choices.forEach(choice => {
     const btn = choice.querySelector('.choices__btn');
@@ -46,6 +58,12 @@ export const initChoices = () => {
   
         btn.classList.add('filter__select_open');
         box.classList.add('choices__box_open');
+      }
+      
+      if (box.classList.contains('choices__box_open')) {
+        document.addEventListener('click', closeAllChoices);
+      } else {
+        document.removeEventListener('click', closeAllChoices);
       }
   
       adjustElemPosition(box);
