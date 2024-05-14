@@ -136,6 +136,13 @@
     font-size: 14px;
     line-height: 1.4;
     color: $orange;
+    outline: 1px solid transparent;
+    outline-offset: 2px;
+    border-radius: 4px;
+
+    &:hover, &:focus-visible {
+      outline-color: $orange;
+    }
 
     @include tablet {
       grid-area: cart;

@@ -26,7 +26,8 @@
   
   &__container {
     padding: 24px 16px;
-    max-width: 310px;
+    max-width: 100%;
+    width: 310px;
     min-height: 778px;
     display: flex;
     flex-direction: column;
@@ -38,7 +39,7 @@
     }
 
     @include mobile {
-      min-height: auto;
+      min-height: 100vh;
       max-width: 292px;
     }
   }

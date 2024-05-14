@@ -1,4 +1,4 @@
-import { store } from "./Store.js";
+import { productStore } from "./Store.js";
 
 export const API_URL = 'http://localhost:3000';
 
@@ -23,7 +23,7 @@ export const fetchProducts = async (params = {}) => {
       throw new Error(`HTTP error! Status: ${response.status}`);
     } else {
       const products = await response.json();
-      store.setProducts(products);
+      productStore.setProducts(products);
     }
   } catch (error) {
     console.error(`Ошибка при получении данных: ${error}`);
