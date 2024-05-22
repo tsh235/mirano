@@ -1,5 +1,5 @@
-import { CartElem } from "./CartElem.jsx";
-import { cartStore } from "./Store.js";
+import { CartElem } from './CartElem';
+import { cartStore } from './Store';
 
 export const renderCart = () => {
   const cartList = document.querySelector('.cart__list');
@@ -14,6 +14,7 @@ export const renderCart = () => {
       messageItem.classList.add('cart_no-product');
       messageItem.textContent = 'Тут пока ничего нет';
       cartList.append(messageItem);
+      cartPriceTotal.innerHTML = `0&nbsp;₽`;
       return;
     }
 

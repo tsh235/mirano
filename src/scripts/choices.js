@@ -1,4 +1,4 @@
-import { debounce } from "./debounce.js";
+import { debounce } from "./debounce";
 
 const adjustElemPosition = (elem, count = 0) => {
   const rect = elem.getBoundingClientRect();

@@ -1,5 +1,5 @@
-import { API_URL } from "./API.js";
-import { cartStore } from "./Store.js";
+import { API_URL } from "./API";
+import { cartStore } from "./Store";
 
 export const CartElem = (product) => (
   <li class="cart__item">

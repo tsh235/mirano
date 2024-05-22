@@ -1,4 +1,4 @@
-import { API_URL } from "./API.js";
+import { API_URL } from './API';
 
 // Хранилище
 class Store {
@@ -126,6 +126,11 @@ class CartStore extends Store {
 
   async addProductCart(id) {
     await this.postCart({id, quantity: 1});
+  }
+
+  clearCart() {
+    this.cart = [];
+    this.notifyObsrvers();
   }
 }
 

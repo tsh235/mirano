@@ -35,12 +35,12 @@
     background-color: $white;
 
     @media (max-width: 1360px) {
-      height: 100%;
+      min-height: 100vh;
     }
 
     @include mobile {
-      min-height: 100vh;
       max-width: 292px;
+      border-radius: 20px;
     }
   }
 
@@ -168,5 +168,17 @@
     border: 1px solid transparent;
     color: #fff;
     outline: none;
+
+    &:hover {
+      background-color: $orange;
+    }
+    &:focus-visible {
+      border-color: $light-orange;
+      background-color: $orange;
+    }
+    &:disabled {
+      opacity: 0.4;
+      pointer-events: none;
+    }
   }
 }

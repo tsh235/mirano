@@ -1,6 +1,6 @@
-import { fetchProducts } from "./API.js";
-import { debounce } from "./debounce.js";
-import { callbackWithPreload } from "./preload.js";
+import { fetchProducts } from "./API";
+import { debounce } from "./debounce";
+import { callbackWithPreload } from "./preload";
 
 export const filterProducts = () => {
   const filterForm = document.querySelector('.filter__form');

@@ -1,5 +1,5 @@
-import { renderCart } from "./renderCart.js";
-import { cartStore } from "./Store.js";
+import { renderCart } from "./renderCart";
+import { cartStore } from "./Store";
 
 const headerCartBtn = document.querySelector('.header__cart-btn');
 const goods = document.querySelector('.goods');
