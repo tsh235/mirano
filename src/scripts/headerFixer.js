@@ -12,7 +12,7 @@ export const initHeaderFixer = () => {
   const handleScroll = () => {
     const scrollDistance = window.scrollY;
 
-    if (scrollDistance > 200) {
+    if (scrollDistance > headerHeight) {
       header.classList.add('header_fixed');
       body.style.paddingTop = `${headerHeight}px`;
     } else {

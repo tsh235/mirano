@@ -28,7 +28,6 @@ export const filterProducts = () => {
   filterForm.addEventListener('input', e => {
     const target = e.target;
 
-    
     if (target.name === 'type') {
       goodsTitle.textContent = target.labels[0].textContent;
       filterForm.minPrice.value = '';
