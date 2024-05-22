@@ -81,11 +81,7 @@
       display: none;
     }
 
-    &:hover {
-      background-color: $footer;
-    }
-
-    &:focus-visible {
+    &:hover, &:focus-visible {
       border-color: $light-orange;
     }
   }
