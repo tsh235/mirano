@@ -1,4 +1,3 @@
-
 const openSelect = () => {
   const selectWrapper = document.querySelector('.order__select-wrapper');
   selectWrapper.classList.add('order__select-wrapper_active');

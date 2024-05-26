@@ -1,5 +1,5 @@
-import { fetchProducts } from "./API";
-import { callbackWithPreload } from "./preload";
+import { fetchProducts } from './API';
+import { callbackWithPreload } from './preload';
 
 export const initSearchProducts = () => {
   const headerForm = document.querySelector('.header__form');

@@ -1,5 +1,5 @@
-import { ListType } from "./ListType";
-import { productStore } from "./Store";
+import { ListType } from './ListType';
+import { productStore } from './Store';
 
 export const initChoicesType = () => {
   const typeChoices = document.querySelector('.filter__choices_type');

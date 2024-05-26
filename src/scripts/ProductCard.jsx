@@ -1,5 +1,5 @@
-import { API_URL } from "./API";
-import { cartStore } from "./Store";
+import { API_URL } from './API';
+import { cartStore } from './Store';
 
 export const ProductCard = (product) => (
   <article class="goods__card card">

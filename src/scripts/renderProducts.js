@@ -1,5 +1,5 @@
-import { ProductCard } from "./ProductCard.jsx";
-import { productStore } from "./Store.js";
+import { ProductCard } from './ProductCard';
+import { productStore } from './Store';
 
 export const renderProducts = async () => {
   const goodsList = document.querySelector('.goods__list');

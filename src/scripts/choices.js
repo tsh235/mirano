@@ -1,4 +1,5 @@
-import { debounce } from "./debounce";
+import { debounce } from './debounce';
+import { productStore } from './Store.js';
 
 const adjustElemPosition = (elem, count = 0) => {
   const rect = elem.getBoundingClientRect();
@@ -72,5 +73,7 @@ export const initChoices = () => {
     window.addEventListener('resize', debounce(() => {
       adjustElemPosition(box);
     }));
+
+    productStore.subscribe(() => adjustElemPosition(box));
   });
 };
